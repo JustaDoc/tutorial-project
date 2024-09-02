@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://b68011gd1nury"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ts7gt"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_ts7gt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 278.0
+offset_top = 93.0
+offset_right = 876.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 60
+text = "The Nomadic Wizard"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 526.0
+offset_top = 237.0
+offset_right = 628.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 40
+text = "Start"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

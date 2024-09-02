@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bppd14c8tmcg3"
+path="res://.godot/imported/Light Ambience 5.wav-38d0c46b8eb1751f5f99652203428a05.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/Fantasy RPG Music Pack/wav/Light Ambience 5.wav"
+dest_files=["res://.godot/imported/Light Ambience 5.wav-38d0c46b8eb1751f5f99652203428a05.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctvunnkv5p8p4"]
+[gd_scene load_steps=4 format=3 uid="uid://ctvunnkv5p8p4"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_b3ss5"]
 [ext_resource type="PackedScene" uid="uid://dh3qssx2vdtvl" path="res://scenes/gui.tscn" id="2_m8uy1"]
+[ext_resource type="AudioStream" uid="uid://bdtji1pj26gcy" path="res://assets/Sounds/Fantasy RPG Music Pack/mp3/Ambient 8.mp3" id="3_gtwcg"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_b3ss5")
 
 [node name="GUI" parent="." instance=ExtResource("2_m8uy1")]
+visible = false
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gtwcg")
+volume_db = -21.08
+autoplay = true
+
+[node name="SoundFX" type="AudioStreamPlayer" parent="."]
+volume_db = -30.119

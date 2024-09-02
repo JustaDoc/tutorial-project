@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdtji1pj26gcy"
+path="res://.godot/imported/Ambient 8.mp3-7e0451a3d3351a6f119ddc717b43089b.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/Fantasy RPG Music Pack/mp3/Ambient 8.mp3"
+dest_files=["res://.godot/imported/Ambient 8.mp3-7e0451a3d3351a6f119ddc717b43089b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

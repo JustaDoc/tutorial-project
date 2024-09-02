@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxbyt0e25aqdf"
+path="res://.godot/imported/Retro Blip 15.wav-10b9800fb3e4fa179b2b5bc9a5f1bb93.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/FreeSFX/GameSFX/Alarms Blip Beeps/Retro Blip 15.wav"
+dest_files=["res://.godot/imported/Retro Blip 15.wav-10b9800fb3e4fa179b2b5bc9a5f1bb93.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

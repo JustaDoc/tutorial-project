@@ -48,27 +48,31 @@ animations = [{
 [node name="GUI" type="CanvasLayer"]
 
 [node name="CoinValue" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.106
 offset_left = 1003.0
 offset_top = -14.0
-offset_right = 1089.0
-offset_bottom = 69.0
+offset_right = -63.0
+offset_bottom = 0.311996
 theme_override_font_sizes/font_size = 60
 text = "0"
 horizontal_alignment = 2
 
 [node name="ScoreValue" type="Label" parent="."]
 anchors_preset = -1
-anchor_bottom = 0.064
+anchor_right = 1.0
+anchor_bottom = 0.153
 offset_left = 1052.0
 offset_top = 57.0
-offset_right = 1125.0
-offset_bottom = 57.528
+offset_right = -27.0
+offset_bottom = -0.144005
 theme_override_font_sizes/font_size = 30
 text = "0
 "
 horizontal_alignment = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1110, 29)
+position = Vector2(1118, 31)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_gau7v")

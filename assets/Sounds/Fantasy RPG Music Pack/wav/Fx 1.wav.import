@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5ps3uwel2pe"
+path="res://.godot/imported/Fx 1.wav-1226ad850e1a0cadbf563b574b418beb.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/Fantasy RPG Music Pack/wav/Fx 1.wav"
+dest_files=["res://.godot/imported/Fx 1.wav-1226ad850e1a0cadbf563b574b418beb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

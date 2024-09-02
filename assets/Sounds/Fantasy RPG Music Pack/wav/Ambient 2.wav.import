@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dsyqhcc5p5pwt"
+path="res://.godot/imported/Ambient 2.wav-4d574c86b2c7c527592e6a0424a4b8e5.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/Fantasy RPG Music Pack/wav/Ambient 2.wav"
+dest_files=["res://.godot/imported/Ambient 2.wav-4d574c86b2c7c527592e6a0424a4b8e5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

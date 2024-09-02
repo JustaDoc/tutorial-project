@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjdevmh3ptm43"
+path="res://.godot/imported/Retro Charge Electric Off 07.wav-41f4ff54fdfd137f4c237be1fcd2acd2.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/FreeSFX/GameSFX/Charge/Retro Charge Electric Off 07.wav"
+dest_files=["res://.godot/imported/Retro Charge Electric Off 07.wav-41f4ff54fdfd137f4c237be1fcd2acd2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

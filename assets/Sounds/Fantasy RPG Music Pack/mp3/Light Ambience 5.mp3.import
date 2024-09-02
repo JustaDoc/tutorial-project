@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dx632a0kege80"
+path="res://.godot/imported/Light Ambience 5.mp3-e12a07cea4c4b8610ff6f65ff6238ad0.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/Fantasy RPG Music Pack/mp3/Light Ambience 5.mp3"
+dest_files=["res://.godot/imported/Light Ambience 5.mp3-e12a07cea4c4b8610ff6f65ff6238ad0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
