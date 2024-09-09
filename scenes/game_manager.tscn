@@ -12,7 +12,7 @@ visible = false
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_gtwcg")
-volume_db = -21.08
+volume_db = -9.837
 autoplay = true
 
 [node name="SoundFX" type="AudioStreamPlayer" parent="."]
