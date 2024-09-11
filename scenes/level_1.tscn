@@ -384,8 +384,10 @@ sources/2 = SubResource("TileSetAtlasSource_qhofg")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_of785"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(500, 200, 1)
-gravity = Vector3(0, 98, 0)
+emission_box_extents = Vector3(5000, 2000, 1)
+initial_velocity_min = 20.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, 10, 0)
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(-2, -3)
@@ -497,6 +499,6 @@ position = Vector2(20202, 175)
 position = Vector2(11005, 5)
 amount = 1000
 process_material = SubResource("ParticleProcessMaterial_of785")
-visibility_rect = Rect2(-500, -200, 1000, 400)
+visibility_rect = Rect2(-1000, -1000, 2000, 2000)
 
 [connection signal="body_entered" from="DeathArea" to="Player" method="_on_death_area_body_entered"]
