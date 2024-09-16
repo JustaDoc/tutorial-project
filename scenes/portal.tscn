@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://kt08hr3bm8jg"]
+
+[ext_resource type="Texture2D" uid="uid://b87s1fqt4thrf" path="res://assets/32x32 Portal Asset Pack/32x32 Portal Asset Pack/portal6_spritesheet.png" id="1_kybrg"]
+[ext_resource type="Script" path="res://scripts/portal.gd" id="2_nobq2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8088h"]
+atlas = ExtResource("1_kybrg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu57w"]
+atlas = ExtResource("1_kybrg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2t0p"]
+atlas = ExtResource("1_kybrg")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66nme"]
+atlas = ExtResource("1_kybrg")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fs0h"]
+atlas = ExtResource("1_kybrg")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjyt0"]
+atlas = ExtResource("1_kybrg")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onh3r"]
+atlas = ExtResource("1_kybrg")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n1t8q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8088h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu57w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2t0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66nme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fs0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjyt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onh3r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5nt40"]
+radius = 16.0
+
+[node name="portal" type="AnimatedSprite2D"]
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_n1t8q")
+autoplay = "default"
+frame_progress = 0.220949
+script = ExtResource("2_nobq2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5nt40")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

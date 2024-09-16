@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://ef6gfvpflvra"]
+[gd_scene load_steps=25 format=4 uid="uid://ef6gfvpflvra"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_fcwye"]
 [ext_resource type="Texture2D" uid="uid://b2ayjp6ydco55" path="res://assets/MossyCavern/Mossy Tileset/Mossy - TileSet.png" id="1_vhb05"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dl15pbn7ipoi7" path="res://scenes/player.tscn" id="5_fx503"]
 [ext_resource type="PackedScene" uid="uid://cghfwfuug7qhy" path="res://scenes/coin.tscn" id="6_d232p"]
 [ext_resource type="PackedScene" uid="uid://bmsmirxhetggy" path="res://scenes/enemy.tscn" id="7_jicoy"]
+[ext_resource type="Texture2D" uid="uid://nhipp72b3m8v" path="res://assets/image.png" id="9_7rj5f"]
+[ext_resource type="PackedScene" uid="uid://kt08hr3bm8jg" path="res://scenes/portal.tscn" id="10_q47sl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yxmu0"]
 texture = ExtResource("2_jyn7i")
@@ -381,13 +383,32 @@ sources/2 = SubResource("TileSetAtlasSource_qhofg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tt0u0"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_20v1m"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_fx761"]
+offsets = PackedFloat32Array(0, 0.156997, 0.846416, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ov24n"]
+gradient = SubResource("Gradient_fx761")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_of785"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(5000, 2000, 1)
+emission_box_extents = Vector3(10000, 2000, 1)
 initial_velocity_min = 20.0
 initial_velocity_max = 80.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 50.0
 gravity = Vector3(0, 10, 0)
+scale_min = 0.5
+scale_max = 1.2
+color_ramp = SubResource("GradientTexture1D_ov24n")
+anim_offset_max = 1.0
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(-2, -3)
@@ -496,9 +517,14 @@ position = Vector2(15549, 168)
 position = Vector2(20202, 175)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_20v1m")
 position = Vector2(11005, 5)
-amount = 1000
+amount = 200
 process_material = SubResource("ParticleProcessMaterial_of785")
-visibility_rect = Rect2(-1000, -1000, 2000, 2000)
+texture = ExtResource("9_7rj5f")
+visibility_rect = Rect2(-10000, -1000, 20000, 2000)
+
+[node name="portal" parent="." instance=ExtResource("10_q47sl")]
+position = Vector2(20966, 11)
 
 [connection signal="body_entered" from="DeathArea" to="Player" method="_on_death_area_body_entered"]
