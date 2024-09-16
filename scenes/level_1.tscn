@@ -519,7 +519,7 @@ position = Vector2(20202, 175)
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_20v1m")
 position = Vector2(11005, 5)
-amount = 200
+amount = 250
 process_material = SubResource("ParticleProcessMaterial_of785")
 texture = ExtResource("9_7rj5f")
 visibility_rect = Rect2(-10000, -1000, 20000, 2000)
