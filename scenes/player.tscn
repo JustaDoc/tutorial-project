@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://dl15pbn7ipoi7"]
+[gd_scene load_steps=53 format=3 uid="uid://dl15pbn7ipoi7"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_aqvhl"]
 [ext_resource type="Texture2D" uid="uid://bt40kdm85kafx" path="res://assets/MossyCavern/BlueWizard/2BlueWizardIdle/Chara - BlueIdle00000.png" id="1_nsm4v"]
@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://bexrkc3toxny6" path="res://assets/MossyCavern/BlueWizard/2BlueWizardWalk/Chara_BlueWalk00017.png" id="46_veuuv"]
 [ext_resource type="Texture2D" uid="uid://qlsj44w55h63" path="res://assets/MossyCavern/BlueWizard/2BlueWizardWalk/Chara_BlueWalk00018.png" id="47_jw5fs"]
 [ext_resource type="Texture2D" uid="uid://b6xpglf74abap" path="res://assets/MossyCavern/BlueWizard/2BlueWizardWalk/Chara_BlueWalk00019.png" id="48_l1tk3"]
+[ext_resource type="PackedScene" uid="uid://copehr25jdpr5" path="res://scenes/health_bar.tscn" id="50_r5fd2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q7ulr"]
 animations = [{
@@ -238,3 +239,11 @@ limit_bottom = 800
 [node name="MagicSpawnPoint" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(2, 2)
+
+[node name="HealthBar" parent="." instance=ExtResource("50_r5fd2")]
+light_mask = 2
+visibility_layer = 2
+offset_left = -74.0
+offset_top = -162.0
+offset_right = 72.0
+offset_bottom = -142.0

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dl15pbn7ipoi7" path="res://scenes/player.tscn" id="5_fx503"]
 [ext_resource type="PackedScene" uid="uid://cghfwfuug7qhy" path="res://scenes/coin.tscn" id="6_d232p"]
 [ext_resource type="PackedScene" uid="uid://bmsmirxhetggy" path="res://scenes/enemy.tscn" id="7_jicoy"]
-[ext_resource type="Texture2D" uid="uid://nhipp72b3m8v" path="res://assets/image.png" id="9_7rj5f"]
+[ext_resource type="Texture2D" uid="uid://mn8jdu8822vo" path="res://assets/ELR-WindyLeafs/ELR_SpringlLeaf.png" id="9_hnv5s"]
 [ext_resource type="PackedScene" uid="uid://kt08hr3bm8jg" path="res://scenes/portal.tscn" id="10_q47sl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yxmu0"]
@@ -489,6 +489,8 @@ position = Vector2(4981, 0)
 position = Vector2(4986, 87)
 
 [node name="DeathArea" type="Area2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(10907, 2206)
 scale = Vector2(1240.14, 12.1233)
 
@@ -521,10 +523,13 @@ material = SubResource("CanvasItemMaterial_20v1m")
 position = Vector2(11005, 5)
 amount = 250
 process_material = SubResource("ParticleProcessMaterial_of785")
-texture = ExtResource("9_7rj5f")
+texture = ExtResource("9_hnv5s")
 visibility_rect = Rect2(-10000, -1000, 20000, 2000)
 
 [node name="portal" parent="." instance=ExtResource("10_q47sl")]
 position = Vector2(20966, 11)
+
+[node name="portal2" parent="." instance=ExtResource("10_q47sl")]
+position = Vector2(20795, 1819)
 
 [connection signal="body_entered" from="DeathArea" to="Player" method="_on_death_area_body_entered"]

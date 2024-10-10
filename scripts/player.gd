@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
+@onready var healthbar = $HealthBar
 
 const SPEED = 600.0
 const JUMP_VELOCITY = -1900.0
 
+var health: int = 6
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -51,11 +53,27 @@ func _physics_process(delta: float) -> void:
 		newMagic.set_position(%MagicSpawnPoint.global_transform.origin)
 		get_parent().add_child(newMagic)
 		
+		
+func _ready():
+	healthbar._init_health(health)
+
+func _on_death_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Enemy"):
+		health -= 1
+		healthbar._set_health(health)
+	if health <= 0:
+		killPlayer()
 
 func killPlayer():
 	position = %RespawnPoint.position
 	$AnimatedSprite2D.flip_h = false
+	
+	health = 6
+	healthbar._init_health(health)
 
-func _on_death_area_body_entered(body: Node2D) -> void:
-	#pass # Replace with function body.
-	killPlayer()
+func take_damage(damage: int) -> void:
+	health -= damage
+	healthbar._set_health(health)
+	
+	if health <= 0:
+		killPlayer()
